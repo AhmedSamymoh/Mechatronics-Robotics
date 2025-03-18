@@ -11,7 +11,7 @@
 
 - **Kinematics Fundamentals**
    - **[`Lab 2`:](/Lab2)** Forward Kinematics  and Inverse Kinematics
-   - **[`Project 2` Lab3 GUI Based Kinamatics Solver:](/Lab3%20GUI%20Based%20Kinamatics%20Solver)** GUI-Based Serial Link Kinematics Solver
+   - **[`Project 2 Lab3 GUI Based Kinamatics Solver:`](/Lab3%20GUI%20Based%20Kinamatics%20Solver)** GUI-Based Serial Link Kinematics Solver
 ----
 
 ## EEP433 - Robotics Course 
