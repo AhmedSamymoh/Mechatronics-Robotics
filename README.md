@@ -2,20 +2,16 @@
 ----
 ## EEP333 - Mechatronics Course
 
-
-
-
-
 ### Labs and Tasks Overview
 ----
 - **ROS Introduction**
-   - **[`Lab 0`:](/Lab0)** *Publisher and Subscriber*
-   - **[`Lab 1`:](/Lab1)** *Server and Client*
-   - **[`Project 1` Monitoring System:](/Lab1%20Ros_project)** *Implementing an Enhanced Weather Monitoring System*
+   - **[`Lab 0`:](/Lab0_Publisher_Subscriber)** *Publisher and Subscriber*
+   - **[`Lab 1`:](/Lab1_Server_Client)** *Server and Client*
+   - **[`Project 1 - ROS Weather Monitoring:`](/Project1_ROS_Weather_Monitoring)** *Implementing an Enhanced Weather Monitoring System*
 
 - **Kinematics Fundamentals**
-   - **[`Lab 2`:](/Lab2)* Forward Kinematics  and Inverse Kinematics
-   - *[`Project 2` Lab3 GUI Based Kinamatics Solver:](/Lab3%20GUI%20Based%20Kinamatics%20Solver)* GUI-Based Serial Link Kinematics Solver
+   - **[`Lab 2`:](/Lab2_Forward_Inverse_Kinematics)** *Forward Kinematics and Inverse Kinematics*
+   - **[`Project 2 - GUI Kinematics Solver:`](/Project2_GUI_Kinematics_Solver)** *GUI-Based Serial Link Kinematics Solver*
  
 ----
 
