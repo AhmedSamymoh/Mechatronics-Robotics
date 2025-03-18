@@ -17,7 +17,7 @@
 ## EEP433 - Robotics Course 
 
 - **Kinematics Fundamentals**
-   - **[`Lab 3`](/Lab3_Object_Detection_ROS/): Real-Time Object Detection with YOLO and OpenCV in ROS
+   - **[`Lab 3`](/Lab3_Object_Detection_ROS/):** Real-Time Object Detection with YOLO and OpenCV in ROS
 - Computer Vision Basics
    - **Lab 4:** Traditional Vision Techniques
       - Sobel Filter
