@@ -1,0 +1,2 @@
+perception_stack_pkg
+-DCATKIN_DEVEL_PREFIX=/home/sami/Desktop/robotics/Lab3/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/sami/Desktop/robotics/Lab3/catkin_ws/install -G Unix Makefiles
