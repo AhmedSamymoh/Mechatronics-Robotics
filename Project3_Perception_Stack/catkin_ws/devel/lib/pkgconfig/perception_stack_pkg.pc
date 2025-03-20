@@ -1,0 +1,8 @@
+prefix=/home/sami/Desktop/robotics/Lab4/catkin_ws/devel
+
+Name: perception_stack_pkg
+Description: Description of perception_stack_pkg
+Version: 0.0.0
+Cflags: -I/home/sami/Desktop/robotics/Lab4/catkin_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
