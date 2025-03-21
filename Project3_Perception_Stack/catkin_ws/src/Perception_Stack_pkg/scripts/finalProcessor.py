@@ -6,6 +6,7 @@ import numpy as np
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 from perception_stack_pkg.msg import DetectedObjectArray, ObjectSpeed, ObjectInfo, ObjectList  # Custom messages
+import threading  # Import the threading module for semaphore
 
 class FinalProcessorNode:
     def __init__(self):
@@ -27,6 +28,9 @@ class FinalProcessorNode:
 
         # Unique ID counter for objects
         self.object_id_counter = 0
+
+        # Semaphore to protect the display
+        self.display_semaphore = threading.Semaphore(1)
 
     def detected_objects_callback(self, detected_objects_msg):
         # Store detected objects
@@ -90,15 +94,21 @@ class FinalProcessorNode:
             cv2.rectangle(display_frame, (obj.bbox_x1, obj.bbox_y1), (obj.bbox_x2, obj.bbox_y2), (0, 255, 0), 2)
 
             # Draw class label, confidence, and speed
-            label = f"{obj.class_name} ({obj.confidence:.2f}) | Speed: {self.speeds.get(obj.class_id, 0.0):.2f} px/s"
+            label = f"[{obj.id}]{obj.class_name} ({obj.confidence:.2f}) | Speed: {self.speeds.get(obj.class_id, 0.0):.2f} px/s"
             cv2.putText(display_frame, label, (obj.bbox_x1, obj.bbox_y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 1)
 
-        # Show the frame
-        cv2.imshow("Final Object Detection", display_frame)
-        cv2.waitKey(1)
+        # Acquire the semaphore before displaying the frame
+        self.display_semaphore.acquire()
+        try:
+            # Show the frame
+            cv2.imshow("Final Object Detection", display_frame)
+            cv2.waitKey(1)
+        finally:
+            # Release the semaphore after displaying the frame
+            self.display_semaphore.release()
 
     def run(self):
-        rate = rospy.Rate(10)  # 10 Hz
+        rate = rospy.Rate(150)  # 10 Hz
         while not rospy.is_shutdown():
             self.process_and_publish()
             rate.sleep()

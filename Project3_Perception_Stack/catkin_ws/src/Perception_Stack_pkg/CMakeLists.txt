@@ -55,7 +55,8 @@ add_message_files(
   ObjectSpeed.msg
   DetectedObject.msg
   DetectedObjectArray.msg
-
+  ObjectList.msg
+  ObjectInfo.msg
 )
 
 ## Generate services in the 'srv' folder
